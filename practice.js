@@ -15,3 +15,9 @@ function findNemo(array) {
     console.log("call to find nemo took " + (t1 - t0) + " milliseconds")
 }
 findNemo(largeArray)
+
+
+//O(n) = Linear time
+const compressAllBoxes = boxes => {
+    boxes.forEach(box => console.log(box))
+}

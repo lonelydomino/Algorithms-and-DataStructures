@@ -88,3 +88,5 @@ function anotherFunChallenge(input) {
     })
 
   }
+
+  //O(n!) - Factorial Time

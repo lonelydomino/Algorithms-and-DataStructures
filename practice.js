@@ -90,3 +90,14 @@ function anotherFunChallenge(input) {
   }
 
   //O(n!) - Factorial Time
+
+
+
+  array.push('i')//O(1)
+
+  array.pop()//O(1)
+
+  array.unshift('x')//O(n)
+
+  array.splice(2, 0 , 'alien')//m
+

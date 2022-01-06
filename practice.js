@@ -134,3 +134,37 @@ function mergeSortedArrays(array1, array2){
 }
 
 mergeSortedArrays([0,3,4,31], [3,4,6,30]);
+
+
+
+//
+//Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+//
+
+
+var maxSubArray = (nums) => {
+        
+    let currentSum = nums[0]
+    let highestSofar = nums[0]
+    
+    for(let i = 1; i < nums.length; i++) {
+        // include current element to previous subarray only
+        // when it can add to a bigger number than itself.
+        if (nums[i] <= currentSum + nums[i]) {
+            currentSum += nums[i];
+        }
+        else {
+            //Else start the max subarray from current element
+            currentSum = nums[i];
+        }
+        if (currentSum > highestSofar) {
+            highestSofar = currentSum;
+        }
+    }
+    nums.length === 1 ? highestSofar = nums[0]:null
+    return highestSofar;
+        
+}
+
+
+

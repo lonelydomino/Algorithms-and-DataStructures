@@ -166,5 +166,22 @@ var maxSubArray = (nums) => {
         
 }
 
+//
+// Given an array, rotate the array to the right by k steps, where k is non-negative.
+//
+
+
+ // const rotate = (nums, k) => {
+ //   for(let i = 0; i < k; i++){
+ //      let last = nums.pop()
+ //      nums.unshift(last)
+ //   }
+ // }
+ 
+ const rotate = (nums, k) => {
+    const start = nums.length - k % nums.length
+    let end = nums.splice( start, k )
+    nums.unshift(...end)
+}
 
 
